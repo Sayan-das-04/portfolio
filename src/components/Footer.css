@@ -1,0 +1,103 @@
+.footer-section {
+  width: 100%;
+  border-top: 1px solid rgba(139, 92, 246, 0.15);
+  background: rgba(8, 11, 22, 0.8);
+  padding: 40px 0;
+  margin-top: 60px;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Brand Section */
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-logo {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 16px;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
+}
+
+.brand-text h3 {
+  color: #f8fafc;
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.brand-text p {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+/* Center Copyright */
+.footer-center p {
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* Right Section */
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-socials a {
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #c084fc;
+}
+
+/* Signature */
+.signature {
+  font-family:
+    "Brush Script MT", "Caveat", cursive; /* Use a handwriting font */
+  color: #c084fc;
+  font-size: 24px;
+  transform: rotate(-5deg);
+  opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-brand {
+    justify-content: center;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

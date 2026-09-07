@@ -1,0 +1,247 @@
+.bento-section {
+  padding: 80px 0;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+
+/* Base Card Styling */
+.bento-card {
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 20px;
+  padding: 35px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.bento-card:hover {
+  border-color: rgba(139, 92, 246, 0.5);
+  background: rgba(15, 23, 42, 0.6);
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.1);
+}
+
+/* Typography */
+.bento-tag {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 20px;
+  color: #c084fc;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.bento-card h3 {
+  color: #f8fafc;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.bento-desc {
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* 1. About Me Specifics */
+.about-card {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.bento-card-content {
+  flex: 1.2;
+}
+
+.bento-highlight {
+  color: #c084fc;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.about-list {
+  flex: 1;
+}
+
+.about-list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.about-list li {
+  color: #e2e8f0;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.about-list li span {
+  font-size: 16px;
+  color: #a855f7;
+}
+
+/* 2. Education Specifics */
+.edu-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.timeline {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.timeline-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, #8b5cf6, #3b82f6);
+  position: relative;
+}
+
+.timeline-line::before,
+.timeline-line::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f8fafc;
+}
+
+.timeline-line::after {
+  right: 0;
+}
+
+.year {
+  color: #e2e8f0;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.edu-details h4 {
+  color: #f8fafc;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.edu-details p {
+  color: #94a3b8;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: #60a5fa;
+  font-size: 11px;
+  border-radius: 15px;
+}
+
+/* 3. Explore Specifics */
+.explore-card {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.explore-content {
+  flex: 1;
+}
+
+.explore-pills {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.explore-pills span {
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  color: #c4b5fd;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* 4. Contact Specifics */
+.contact-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.contact-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  color: #f8fafc;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 13px;
+  transition: 0.3s ease;
+}
+
+.contact-links a:hover {
+  background: rgba(139, 92, 246, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Background Icons */
+.bg-icon {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  font-size: 120px;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+/* Responsive Constraints */
+@media (max-width: 1024px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-card,
+  .explore-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .bento-card {
+    padding: 25px;
+  }
+
+  .contact-links {
+    flex-direction: column;
+  }
+}
